@@ -1,14 +1,14 @@
 {
   "name": "squeleton-api",
   "version": "1.0.0",
-  "description": "app to upload layouts files to process on scorecard",
+  "description": "squeleton api to init project on nodejs and express",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env DEBUG=app:* nodemon index",
     "start": "cross-env NODE_ENV=production node index"
   },
   "keywords": [],
-  "author": "David Chandzul, Rusel Arceo",
+  "author": "David Chandzul",
   "license": "ISC",
   "dependencies": {
     "@hapi/boom": "^9.1.2",
