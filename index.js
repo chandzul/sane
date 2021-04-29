@@ -9,6 +9,7 @@ const { config } = require('./config/index');
 
 // Middlewares
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
+const { logErrors, wrapErrors, errorHandler } = require('./utils/middleware/errorHandler');
 
 // Cors
 app.use(cors());
@@ -21,6 +22,11 @@ testApi(app);
 
 // 404
 app.use(notFoundHandler);
+
+// Errors
+app.use(logErrors);
+app.use(wrapErrors);
+app.use(errorHandler);
 
 // Server
 app.listen(config.port, () => {
